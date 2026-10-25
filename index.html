@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Salary &amp; Labour Calculators | Gratuity, Overtime, Net Salary</title>
+<meta name="description" content="Estimate UAE gratuity, overtime pay, leave encashment and net salary with clear rules, worked examples and answers based on UAE labour law.">
+<link rel="canonical" href="https://uaecalculator.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UAE Salary &amp; Labour Calculators | Gratuity, Overtime, Net Salary">
+<meta property="og:description" content="Estimate UAE gratuity, overtime pay, leave encashment and net salary with clear rules, worked examples and answers based on UAE labour law.">
+<meta property="og:url" content="https://uaecalculator.github.io/">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --green:#0b6b3a;
+    --green-dark:#084f2b;
+    --navy:#12355b;
+    --gold:#c9a227;
+    --ink:#1d2733;
+    --muted:#5a6a7a;
+    --bg:#f6f8f6;
+    --card:#ffffff;
+    --line:#dde5dd;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65;
+    font-size:17px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:24px 18px 48px;}
+  header.top{
+    background:linear-gradient(135deg,var(--green-dark),var(--green));
+    color:#fff;
+    border-radius:14px;
+    padding:30px 28px 24px;
+    margin-bottom:26px;
+  }
+  header.top .brand{font-weight:700;letter-spacing:.4px;font-size:14px;text-transform:uppercase;color:#ffe9a8;}
+  header.top h1{margin:10px 0 10px;font-size:30px;line-height:1.25;}
+  header.top p{margin:0;color:#e8f3ec;font-size:16px;}
+  h2{color:var(--navy);font-size:24px;line-height:1.3;margin:36px 0 12px;padding-top:10px;border-top:3px solid var(--gold);}
+  h3{color:var(--green-dark);font-size:19px;margin:24px 0 8px;}
+  p{margin:10px 0;}
+  a{color:var(--green);font-weight:600;text-decoration:underline;}
+  a:hover{color:var(--green-dark);}
+  ul,ol{margin:10px 0 10px 22px;padding:0;}
+  li{margin:6px 0;}
+  .toc{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:5px solid var(--green);
+    border-radius:10px;
+    padding:18px 22px;
+    margin:22px 0;
+  }
+  .toc h2{border:none;margin:0 0 8px;padding:0;font-size:19px;}
+  .toc ol{margin:6px 0 6px 20px;}
+  .note{
+    background:#eef6f0;
+    border:1px solid var(--line);
+    border-left:5px solid var(--gold);
+    border-radius:10px;
+    padding:14px 18px;
+    margin:18px 0;
+  }
+  .note strong{color:var(--green-dark);}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:16px;}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even) td{background:#f2f6f2;}
+  .calc{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px;
+    margin:22px 0;
+    box-shadow:0 2px 10px rgba(18,53,91,.06);
+  }
+  .calc h2{border:none;padding:0;margin:0 0 6px;}
+  .calc label{display:block;font-weight:600;margin:14px 0 5px;color:var(--navy);}
+  .calc input{
+    width:100%;
+    padding:11px 12px;
+    font-size:17px;
+    border:1px solid #b9c8bb;
+    border-radius:8px;
+  }
+  .calc button{
+    margin-top:16px;
+    background:var(--green);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:12px 22px;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    width:100%;
+  }
+  .calc button:hover{background:var(--green-dark);}
+  .calc .result{
+    margin-top:16px;
+    background:#eef6f0;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:18px;
+  }
+  .calc .result strong{color:var(--green-dark);}
+  .faq-item{margin:16px 0;}
+  .faq-item h3{margin-bottom:4px;}
+  footer{
+    margin-top:44px;
+    border-top:3px solid var(--gold);
+    padding-top:18px;
+    color:var(--muted);
+    font-size:15px;
+  }
+  @media (max-width:600px){
+    body{font-size:16px;}
+    header.top h1{font-size:25px;}
+    h2{font-size:21px;}
+    .wrap{padding:16px 12px 40px;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is UAE gratuity calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gratuity is based on the last basic wage. Take the monthly basic salary and divide by 30 to get the daily wage. Multiply by 21 days for each of the first five years of service and by 30 days for each year after that. The total is capped at two years of wage, and at least one year of continuous service is needed to qualify."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the gratuity for a basic salary of AED 10,000 after six years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The daily wage is AED 10,000 divided by 30, which is AED 333.33. The first five years give 105 days, worth AED 35,000. The sixth year adds 30 days, worth AED 10,000. The total gratuity is AED 45,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does gratuity include housing and transport allowances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The standard gratuity calculation uses the basic wage only. Housing, transport and other allowances are not counted, which is why entering the full salary package into a calculator produces a figure that is too high."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is overtime pay calculated in the UAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the hourly basic rate: monthly basic salary divided by 30, then divided by 8. Ordinary overtime is paid at that rate plus at least 25 percent. Overtime worked between 10 pm and 4 am is paid at the rate plus at least 50 percent, and that night rule does not apply to shift workers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is unused leave paid when employment ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any annual leave balance that has not been taken is paid in cash when employment ends. The payment uses the basic wage: monthly basic salary divided by 30, multiplied by the number of unused days. Under Article 29(9) of the labour law, this payment is due regardless of the reason the employment ended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is an Emirati employee's net salary lower than the gross salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main reason is the GPSSA pension contribution. Emirati employees in the private sector pay an employee share of 5 percent of the contribution salary if they were first insured before 31 October 2023, or 11 percent if they were first insured on or after that date. The share is deducted from the monthly salary, which reduces take-home pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is the notice period in the UAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The notice period is the one written in the employment contract, and it must be at least 30 days and no more than 90 days. Salary and benefits continue as normal during the notice period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can I borrow with a salary transfer loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Central Bank rules cap a salary transfer loan at 20 times the monthly salary, with repayment spread over no more than 48 months. A salary of AED 12,500 therefore gives a maximum loan ceiling of AED 250,000. The bank still runs its own checks, so the approved amount can be lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a calculator result guarantee what I will be paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A calculator gives an estimate based on the figures entered and the standard rules. The final amount can change if the contract, service record or scheme rules differ. Check the estimate against your contract and payslips, and use official channels such as MOHRE for a confirmed position."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand">UAE Calculators Guide</div>
+  <h1>UAE Salary &amp; Labour Calculators: Gratuity, Overtime, Net Salary and Leave Pay</h1>
+  <p>Plain-language explanations of how pay-related amounts are worked out for employees in the United Arab Emirates, with the rules behind each figure and examples you can check by hand.</p>
+</header>
+
+<p>Most salary questions in the UAE come down to a handful of calculations. What will the end-of-service gratuity be after several years with one employer? How much extra should a month of late shifts add to the payslip? What happens to unused annual leave when a contract ends? And why does the amount that lands in the bank differ from the figure in the offer letter?</p>
+
+<p>The <a href="https://uaecalculators.ae/salary-labour-calculators/">UAE Salary &amp; Labour Calculators</a> on the main site answer each of these questions with a dedicated tool. This page explains the thinking behind them: the formula each tool applies, the labour law rules that set the rates, and the input mistakes that most often push a result off course. Read the section that matches your question, then run your own figures through the matching calculator.</p>
+
+<div class="note"><strong>Good to know:</strong> every figure on this page is an estimate built from the standard rules. Your contract, your employer's scheme and the official guidance for your employment category decide the final amount.</div>
+
+<nav class="toc">
+  <h2>On this page</h2>
+  <ol>
+    <li><a href="#cover">What the salary and labour calculators cover</a></li>
+    <li><a href="#try">Try it: a quick gratuity estimate</a></li>
+    <li><a href="#gratuity">How end-of-service gratuity is calculated</a></li>
+    <li><a href="#overtime">How overtime pay is calculated</a></li>
+    <li><a href="#leave">How leave encashment works when employment ends</a></li>
+    <li><a href="#net">How net salary is worked out</a></li>
+    <li><a href="#notice">How long the notice period is</a></li>
+    <li><a href="#loan">How much a salary transfer loan can reach</a></li>
+    <li><a href="#accurate">How to get accurate results</a></li>
+    <li><a href="#why">Why use these calculators</a></li>
+    <li><a href="#faq">Frequently asked questions</a></li>
+  </ol>
+</nav>
+
+<h2 id="cover">What Do the Salary and Labour Calculators Cover?</h2>
+
+<p>Six tools make up the salary and labour set, and each one deals with a single stage of working life in the UAE, from the monthly payslip to the final settlement.</p>
+
+<ul>
+  <li><strong>Gratuity calculator:</strong> estimates the end-of-service benefit from the last basic wage and the length of service.</li>
+  <li><strong>Overtime calculator:</strong> works out extra pay for hours beyond the normal schedule, at the daytime and night rates.</li>
+  <li><strong>Leave encashment calculator:</strong> values unused annual leave when employment ends.</li>
+  <li><strong>Net salary calculator:</strong> shows take-home pay after the deductions that apply, including pension contributions for Emirati staff.</li>
+  <li><strong>Notice period calculator:</strong> helps pin down start and end dates for the notice period written in the contract.</li>
+  <li><strong>Salary transfer loan calculator:</strong> shows the largest loan the Central Bank caps allow on a given salary, plus the monthly burden.</li>
+</ul>
+
+<p>Employees use the tools to prepare for a job change or to question a payslip. HR teams use them to sanity-check a settlement before it is issued. Small business owners use them to budget for end-of-service liabilities that build up quietly year after year. In each case the value comes from understanding the rule first and the number second, which is why every section below shows its working.</p>
+
+<div class="calc" id="try">
+  <h2>Try It: A Quick Gratuity Estimate</h2>
+  <p>Enter a monthly basic salary and the years of service. The estimate uses 21 days of basic wage per year for the first five years and 30 days per year after that, capped at two years of wage.</p>
+  <label for="gs-basic">Monthly basic salary (AED)</label>
+  <input type="number" id="gs-basic" value="6000" min="0" step="any">
+  <label for="gs-years">Years of continuous service</label>
+  <input type="number" id="gs-years" value="5" min="0" step="any">
+  <button type="button" onclick="calcGratuity()">Calculate gratuity</button>
+  <div class="result" id="gs-result"><strong>Estimated gratuity: AED 21,000.00</strong><br>105 days of basic wage at AED 200.00 per day.</div>
+  <p style="color:var(--muted);font-size:15px;">Estimate only. Gratuity generally requires at least one year of continuous service.</p>
+</div>
+
+<h2 id="gratuity">How Is End-of-Service Gratuity Calculated in the UAE?</h2>
+
+<p>Gratuity is the lump sum an eligible private sector employee receives when employment ends. Article 51 of Federal Decree-Law No. 33 of 2021 sets the standard formula, and three facts drive the result: the last basic wage, the length of continuous service, and the two-year cap.</p>
+
+<h3>What are the standard gratuity rules?</h3>
+
+<ul>
+  <li>An employee qualifies after completing at least one year of continuous service.</li>
+  <li>Each of the first five years earns 21 days of basic wage.</li>
+  <li>Each year beyond five earns 30 days of basic wage.</li>
+  <li>The wage used is the last basic wage, not the full package with allowances.</li>
+  <li>The total benefit cannot exceed two years of wage.</li>
+</ul>
+
+<p>The daily wage sits at the centre of the formula. Divide the monthly basic salary by 30 to get one day of basic wage, count the days earned across the service period, and multiply the two together. A part year counts in proportion, so someone leaving after seven years and six months earns the full seven years plus half of the eighth year's rate.</p>
+
+<h3>What does the calculation look like on AED 10,000?</h3>
+
+<p>Take an employee whose last basic salary is AED 10,000 a month. The daily wage is AED 10,000 divided by 30, which is AED 333.33. Now apply the day rates at three service lengths:</p>
+
+<table>
+  <tr><th>Years of service</th><th>Days earned</th><th>Gratuity</th></tr>
+  <tr><td>3 years</td><td>63 days (21 x 3)</td><td>AED 21,000</td></tr>
+  <tr><td>6 years</td><td>135 days (105 + 30)</td><td>AED 45,000</td></tr>
+  <tr><td>10 years</td><td>255 days (105 + 150)</td><td>AED 85,000</td></tr>
+</table>
+
+<p>The six-year line shows the step in the formula. The first five years produce 105 days, worth AED 35,000. The sixth year runs at the higher rate and adds 30 days, worth AED 10,000, for a total of AED 45,000. Even at ten years the total of AED 85,000 stays well below the cap for this salary, which is two years of wage, or AED 240,000. The cap only starts to bite on very long service records.</p>
+
+<h3>Why does the basic salary matter so much?</h3>
+
+<p>Many UAE contracts split pay into a basic wage plus housing, transport and other allowances. Gratuity ignores the allowances completely. Two employees on the same total package can receive very different gratuities if one contract sets a higher basic share than the other. Entering the total package into a calculator is the single most common reason an estimate comes out too high. When you want the figure worked out from your exact start and end dates, use the <a href="https://uaecalculators.ae/gratuity-calculator/">gratuity calculator</a> and enter the basic wage from your most recent payslip.</p>
+
+<div class="note"><strong>Tip:</strong> if your basic salary changed during your service, the calculation still uses the last basic wage for the whole period under the standard system. A recent raise lifts the value of every year, not only the recent ones.</div>
+
+<h2 id="overtime">How Is Overtime Pay Calculated?</h2>
+
+<p>Overtime pays for hours worked beyond the normal schedule, and the labour law builds the rate from the basic wage rather than the full salary. That keeps the method simple: one hourly rate, then a premium on top.</p>
+
+<h3>What are the overtime rates?</h3>
+
+<ul>
+  <li>The hourly basic rate is the monthly basic salary divided by 30, then divided by 8.</li>
+  <li>Ordinary overtime is paid at the hourly rate plus at least 25 percent.</li>
+  <li>Overtime between 10 pm and 4 am is paid at the hourly rate plus at least 50 percent.</li>
+  <li>The night premium rule does not apply to shift workers.</li>
+</ul>
+
+<h3>A worked overtime example</h3>
+
+<p>An employee with a basic salary of AED 4,800 has an hourly basic rate of AED 20 (4,800 divided by 30 divided by 8). At the ordinary rate, each overtime hour pays AED 25, so ten extra hours in a month add AED 250. If six of those hours fall between 10 pm and 4 am, and the employee is not a shift worker, those six hours pay AED 30 each, or AED 180, instead of AED 150 at the ordinary rate. Checking which hours landed in the night window is worth AED 30 in this small example, and far more across a full roster of night work.</p>
+
+<h3>What should you check on your payslip?</h3>
+
+<p>Three things decide whether a payslip is right: the hours recorded against your attendance, the basic salary the employer used, and the premium applied to each block of hours. A payslip that prices every extra hour at one flat rate deserves a second look if some of the work happened at night. Keep your own record of late hours for a month and compare it with the payroll output before raising the point.</p>
+
+<h2 id="leave">How Does Leave Encashment Work When Employment Ends?</h2>
+
+<p>Full-time employees earn 30 days of annual leave per year. When employment ends with part of that leave untaken, the remaining balance converts to cash. Article 29(9) of the labour law confirms that this payment is due regardless of the reason the employment ended, whether the employee resigned, the contract expired or the employer ended it.</p>
+
+<h3>How is the leave balance valued?</h3>
+
+<p>The value uses the basic wage. Divide the monthly basic salary by 30 to get the daily rate, then multiply by the number of unused days. An employee on a basic salary of AED 9,000 who leaves with 12 days untaken has a daily rate of AED 300, so the leave payment is AED 3,600. That amount sits inside the final settlement alongside the last salary payment and the gratuity.</p>
+
+<h3>Which days count towards the balance?</h3>
+
+<p>The balance is the entitlement earned up to the last working day, minus the leave already taken. Partial years earn a proportional share, so someone leaving eight months into a leave year has accrued roughly twenty days. Disagreements usually come from records rather than rules: if your own leave log differs from the HR system, settle the day count first, because the arithmetic after that is straightforward.</p>
+
+<h2 id="net">How Is Net Salary Worked Out in the UAE?</h2>
+
+<p>The UAE charges no personal income tax, which makes the net salary calculation shorter than in most countries. Gross pay and take-home pay are often close, and where they differ, the gap usually has one main cause for Emirati employees: pension.</p>
+
+<h3>How does the GPSSA pension affect take-home pay?</h3>
+
+<p>Emirati employees in the private sector contribute to the General Pension and Social Security Authority (GPSSA) scheme. The employee share depends on when the person was first insured:</p>
+
+<table>
+  <tr><th>First insured</th><th>Employee share of contribution salary</th><th>Deduction on AED 20,000</th></tr>
+  <tr><td>Before 31 October 2023</td><td>5 percent</td><td>AED 1,000 per month</td></tr>
+  <tr><td>On or after 31 October 2023</td><td>11 percent</td><td>AED 2,200 per month</td></tr>
+</table>
+
+<p>On a contribution salary of AED 20,000, an employee under the newer regime takes home AED 1,200 less each month than a colleague on the same salary under the older one. A net salary calculator that asks for the first-insured date exists precisely because of this split. Most expatriate employees have no statutory pension deduction, so their net pay normally matches the agreed package unless the employer applies other deductions, such as salary advances or unpaid leave.</p>
+
+<h2 id="notice">How Long Is the Notice Period?</h2>
+
+<p>The notice period is agreed in the employment contract, and the law sets the corridor: at least 30 days and no more than 90 days. Salary and benefits continue as normal while notice runs, and the end date of employment is the start date plus the agreed number of days.</p>
+
+<p>Getting the dates right matters more than the arithmetic. A contract that requires 60 days of notice, handed in on 1 March, points to a last working day at the end of April. A notice period calculator removes the counting errors that creep in around month lengths and weekends. If either side wants the employment to end sooner than the notice period allows, that becomes a negotiation about compensation rather than a date problem, and the contract wording decides how it settles.</p>
+
+<h2 id="loan">How Much Can You Borrow With a Salary Transfer Loan?</h2>
+
+<p>A salary transfer loan is a personal loan repaid from the salary paid into the same bank. Central Bank rules set two hard caps: the loan cannot exceed 20 times the monthly salary, and the repayment period cannot run beyond 48 months.</p>
+
+<p>On a salary of AED 12,500, the size cap gives a ceiling of AED 250,000. The term cap then shapes the monthly payment: spreading AED 250,000 across 48 months means a heavy monthly commitment before interest is even added, which is why many borrowers take less than the ceiling. A salary transfer loan calculator shows both the maximum the rules allow and the payment each loan size creates, so you can pick a figure your monthly budget survives. Passing the caps does not guarantee approval, because the bank still reviews existing debts and credit history.</p>
+
+<h2 id="accurate">How to Get Accurate Results From Any Salary Calculator</h2>
+
+<p>A calculator is only as honest as the figures fed into it. Four habits keep estimates close to the amount that actually gets paid.</p>
+
+<ol>
+  <li><strong>Use the basic wage, not the package.</strong> Gratuity, overtime and leave pay all build on the basic salary. Find it on your contract or payslip and enter that figure alone.</li>
+  <li><strong>Use exact service dates.</strong> A few weeks of service either way changes the day count, and the day count is the gratuity. Start and end dates beat a rounded number of years.</li>
+  <li><strong>Split the hours correctly.</strong> For overtime, separate ordinary hours from hours between 10 pm and 4 am, because the premium differs and the payslip should show the same split.</li>
+  <li><strong>Check the scheme and the start date.</strong> For net salary, the pension result hinges on whether the employee was first insured before or after 31 October 2023. One wrong date changes the deduction by six percentage points.</li>
+</ol>
+
+<p>After running a calculation, hold the result against two documents: the employment contract and the most recent payslip. If the estimate and the employer's figure disagree, the difference almost always traces back to one of the four points above. Where a disagreement stays unresolved, MOHRE is the official channel for private sector employment questions.</p>
+
+<h2 id="why">Why Use These Calculators?</h2>
+
+<p>The practical reason is timing. A gratuity estimate takes a minute on a calculator and half an hour with a spreadsheet and the law open beside it. That speed matters when a resignation letter is being drafted, when an HR department is preparing a settlement for review, or when a payslip looks light and the employee wants a figure in hand before asking payroll about it.</p>
+
+<p>The second reason is comparison. Changing one input at a time shows what drives a result: resigning after the fifth anniversary rather than before it, taking accrued leave instead of cashing it in, or borrowing below the loan ceiling to keep the monthly payment comfortable. Those trade-offs are hard to see in a single static number and easy to see across three runs of a calculator.</p>
+
+<p>The limit is worth stating plainly. These tools apply the standard rules to the figures entered. They do not read your contract, they cannot see an alternative end-of-service savings scheme if your employer runs one, and they do not replace the official calculation an authority would make. Treat the output as a well-built estimate and a starting point for any conversation about the final amount.</p>
+
+<p>Related resource: a companion page, <a href="https://uaefinancialcal.netlify.app/">UAE Financial Calculator</a>, covers gratuity alongside VAT, overtime and property costs in one place.</p>
+
+<h2>Short Answers</h2>
+
+<div class="faq-item">
+  <h3>Is gratuity based on basic salary or total salary?</h3>
+  <p>Basic salary only. Allowances such as housing and transport are left out of the standard calculation.</p>
+</div>
+<div class="faq-item">
+  <h3>When does an employee become eligible for gratuity?</h3>
+  <p>After completing at least one year of continuous service.</p>
+</div>
+<div class="faq-item">
+  <h3>Is there income tax on salaries in the UAE?</h3>
+  <p>No. The UAE does not charge personal income tax, so deductions from gross pay are limited and specific.</p>
+</div>
+<div class="faq-item">
+  <h3>What is the longest notice period a contract can set?</h3>
+  <p>90 days. The shortest permitted period is 30 days.</p>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <h3>How is UAE gratuity calculated?</h3>
+  <p>Gratuity is based on the last basic wage. Take the monthly basic salary and divide by 30 to get the daily wage. Multiply by 21 days for each of the first five years of service and by 30 days for each year after that. The total is capped at two years of wage, and at least one year of continuous service is needed to qualify.</p>
+</div>
+<div class="faq-item">
+  <h3>What is the gratuity for a basic salary of AED 10,000 after six years?</h3>
+  <p>The daily wage is AED 10,000 divided by 30, which is AED 333.33. The first five years give 105 days, worth AED 35,000. The sixth year adds 30 days, worth AED 10,000. The total gratuity is AED 45,000.</p>
+</div>
+<div class="faq-item">
+  <h3>Does gratuity include housing and transport allowances?</h3>
+  <p>No. The standard gratuity calculation uses the basic wage only. Housing, transport and other allowances are not counted, which is why entering the full salary package into a calculator produces a figure that is too high.</p>
+</div>
+<div class="faq-item">
+  <h3>How is overtime pay calculated in the UAE?</h3>
+  <p>Start with the hourly basic rate: monthly basic salary divided by 30, then divided by 8. Ordinary overtime is paid at that rate plus at least 25 percent. Overtime worked between 10 pm and 4 am is paid at the rate plus at least 50 percent, and that night rule does not apply to shift workers.</p>
+</div>
+<div class="faq-item">
+  <h3>How is unused leave paid when employment ends?</h3>
+  <p>Any annual leave balance that has not been taken is paid in cash when employment ends. The payment uses the basic wage: monthly basic salary divided by 30, multiplied by the number of unused days. Under Article 29(9) of the labour law, this payment is due regardless of the reason the employment ended.</p>
+</div>
+<div class="faq-item">
+  <h3>Why is an Emirati employee's net salary lower than the gross salary?</h3>
+  <p>The main reason is the GPSSA pension contribution. Emirati employees in the private sector pay an employee share of 5 percent of the contribution salary if they were first insured before 31 October 2023, or 11 percent if they were first insured on or after that date. The share is deducted from the monthly salary, which reduces take-home pay.</p>
+</div>
+<div class="faq-item">
+  <h3>How long is the notice period in the UAE?</h3>
+  <p>The notice period is the one written in the employment contract, and it must be at least 30 days and no more than 90 days. Salary and benefits continue as normal during the notice period.</p>
+</div>
+<div class="faq-item">
+  <h3>How much can I borrow with a salary transfer loan?</h3>
+  <p>Central Bank rules cap a salary transfer loan at 20 times the monthly salary, with repayment spread over no more than 48 months. A salary of AED 12,500 therefore gives a maximum loan ceiling of AED 250,000. The bank still runs its own checks, so the approved amount can be lower.</p>
+</div>
+<div class="faq-item">
+  <h3>Does a calculator result guarantee what I will be paid?</h3>
+  <p>No. A calculator gives an estimate based on the figures entered and the standard rules. The final amount can change if the contract, service record or scheme rules differ. Check the estimate against your contract and payslips, and use official channels such as MOHRE for a confirmed position.</p>
+</div>
+
+<h2>Sources and Official References</h2>
+
+<p>The rules summarised on this page come from Federal Decree-Law No. 33 of 2021 on the regulation of labour relations, the pension framework administered by GPSSA, and the Central Bank consumer lending caps. For the official text and guidance, see the <a href="https://www.mohre.gov.ae/">Ministry of Human Resources and Emiratisation (MOHRE)</a> and the <a href="https://u.ae/">UAE Government portal (u.ae)</a>. For the full set of working tools behind these explanations, visit <a href="https://uaecalculators.ae/">uaecalculators.ae</a>.</p>
+
+<footer>
+  <p><strong>UAE Salary &amp; Labour Calculators</strong> - a guide to gratuity, overtime pay, leave encashment, net salary, notice periods and salary transfer loans for employees and employers in the United Arab Emirates. All figures are estimates based on the standard rules; confirm final amounts against your contract and official guidance.</p>
+  <p>Updated October 2026.</p>
+</footer>
+
+</div>
+
+<script>
+function fmt(n){
+  return n.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function calcGratuity(){
+  var basic = parseFloat(document.getElementById('gs-basic').value);
+  var years = parseFloat(document.getElementById('gs-years').value);
+  if (isNaN(basic)) { basic = 0; }
+  if (isNaN(years)) { years = 0; }
+  if (basic < 0) { basic = 0; }
+  if (years < 0) { years = 0; }
+  var daily = basic / 30;
+  var days = 21 * Math.min(years, 5) + 30 * Math.max(years - 5, 0);
+  var amount = daily * days;
+  var cap = basic * 24;
+  var capped = false;
+  if (amount > cap) { amount = cap; capped = true; }
+  var msg = '<strong>Estimated gratuity: AED ' + fmt(amount) + '</strong><br>' + days.toFixed(2) + ' days of basic wage at AED ' + fmt(daily) + ' per day.';
+  if (capped) { msg += '<br>The two-year wage cap applies to this result.'; }
+  if (years < 1) { msg += '<br>Note: gratuity generally requires at least one year of continuous service.'; }
+  document.getElementById('gs-result').innerHTML = msg;
+}
+</script>
+</body>
+</html>
