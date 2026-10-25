@@ -228,7 +228,7 @@
   <h2>On this page</h2>
   <ol>
     <li><a href="#cover">What the salary and labour calculators cover</a></li>
-    <li><a href="#try">Try it: a quick gratuity estimate</a></li>
+    <li><a href="#try">Calculate Your Gratuity</a></li>
     <li><a href="#gratuity">How end-of-service gratuity is calculated</a></li>
     <li><a href="#overtime">How overtime pay is calculated</a></li>
     <li><a href="#leave">How leave encashment works when employment ends</a></li>
@@ -256,16 +256,10 @@
 
 <p>Employees use the tools to prepare for a job change or to question a payslip. HR teams use them to sanity-check a settlement before it is issued. Small business owners use them to budget for end-of-service liabilities that build up quietly year after year. In each case the value comes from understanding the rule first and the number second, which is why every section below shows its working.</p>
 
-<div class="calc" id="try">
-  <h2>Try It: A Quick Gratuity Estimate</h2>
-  <p>Enter a monthly basic salary and the years of service. The estimate uses 21 days of basic wage per year for the first five years and 30 days per year after that, capped at two years of wage.</p>
-  <label for="gs-basic">Monthly basic salary (AED)</label>
-  <input type="number" id="gs-basic" value="6000" min="0" step="any">
-  <label for="gs-years">Years of continuous service</label>
-  <input type="number" id="gs-years" value="5" min="0" step="any">
-  <button type="button" onclick="calcGratuity()">Calculate gratuity</button>
-  <div class="result" id="gs-result"><strong>Estimated gratuity: AED 21,000.00</strong><br>105 days of basic wage at AED 200.00 per day.</div>
-  <p style="color:var(--muted);font-size:15px;">Estimate only. Gratuity generally requires at least one year of continuous service.</p>
+<div class="calc" id="try" style="text-align:center;">
+  <h2>Calculate Your Gratuity</h2>
+  <p>Work out your own gratuity in seconds with the free calculator on UAE Calculators:</p>
+  <p style="margin:18px 0 8px;"><a href="https://uaecalculators.ae/gratuity-calculator/" style="display:inline-block;background:#0b6b3a;color:#ffffff;font-weight:700;padding:14px 28px;border-radius:8px;font-size:18px;text-decoration:none;">Calculate Your Gratuity</a></p>
 </div>
 
 <h2 id="gratuity">How Is End-of-Service Gratuity Calculated in the UAE?</h2>
@@ -456,28 +450,5 @@
 
 </div>
 
-<script>
-function fmt(n){
-  return n.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2});
-}
-function calcGratuity(){
-  var basic = parseFloat(document.getElementById('gs-basic').value);
-  var years = parseFloat(document.getElementById('gs-years').value);
-  if (isNaN(basic)) { basic = 0; }
-  if (isNaN(years)) { years = 0; }
-  if (basic < 0) { basic = 0; }
-  if (years < 0) { years = 0; }
-  var daily = basic / 30;
-  var days = 21 * Math.min(years, 5) + 30 * Math.max(years - 5, 0);
-  var amount = daily * days;
-  var cap = basic * 24;
-  var capped = false;
-  if (amount > cap) { amount = cap; capped = true; }
-  var msg = '<strong>Estimated gratuity: AED ' + fmt(amount) + '</strong><br>' + days.toFixed(2) + ' days of basic wage at AED ' + fmt(daily) + ' per day.';
-  if (capped) { msg += '<br>The two-year wage cap applies to this result.'; }
-  if (years < 1) { msg += '<br>Note: gratuity generally requires at least one year of continuous service.'; }
-  document.getElementById('gs-result').innerHTML = msg;
-}
-</script>
 </body>
 </html>
